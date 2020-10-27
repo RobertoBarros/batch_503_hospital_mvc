@@ -7,8 +7,8 @@ class PatientRepository
     @csv_file = csv_file
     @room_repository = room_repository
     @patients = []
-    @next_id = @patients.empty? ? 1 : @patients.last.id + 1
     load_csv
+    @next_id = @patients.empty? ? 1 : @patients.last.id + 1
   end
 
   def add(patient)

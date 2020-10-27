@@ -6,8 +6,8 @@ class RoomRepository
   def initialize(csv_file)
     @csv_file = csv_file
     @rooms = []
-    @next_id = @rooms.empty? ? 1 : @rooms.last.id + 1
     load_csv
+    @next_id = @rooms.empty? ? 1 : @rooms.last.id + 1
   end
 
   def add(room)
